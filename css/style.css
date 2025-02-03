@@ -1,0 +1,149 @@
+#wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Sidebar dan konten utama sejajar */
+    min-height: 100vh; /* Pastikan tinggi penuh */
+}
+#content-wrapper {
+    margin-left: 180px; /* Sama dengan lebar sidebar */
+    flex-grow: 1; /* Isi sisa ruang */
+}
+
+
+/*visi misi*/
+#beranda {
+    display: flex; /* Mengatur elemen anak (visi-misi-box) agar berada di tengah secara horizontal */
+    align-items: center;
+    justify-content: flex-end;
+    background: 
+        linear-gradient(rgba(154, 110, 110, 0.5), rgba(16, 13, 213, 0.5)), /* Linear gradient dengan transparansi */
+        url('/Semester 5/bpstator/img/statistik01.jpg'); /* Gambar di belakang */
+    background-size: cover; /* Gambar memenuhi area */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    background-position: center; /* Pusatkan gambar */
+    height: 100vh; /* Tinggi penuh layar */
+    background-attachment: fixed;
+ /* Mengatur elemen anak agar berada di tengah secara vertikal */
+}
+
+/* Gaya untuk kotak visi dan misi */
+.visi-misi-box {
+    width: 500px; /* Lebar kotak */
+    height: auto;
+    background: rgba(255, 255, 255); /* Latar belakang putih transparan */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bps, .visi-misi-box h5  {
+    font-weight: bold;
+}
+
+.warna1 {
+    color: #0394dd; /* Contoh warna merah */
+}
+.warna2 {
+    color: #6bb92b; /* Contoh warna hijau */
+}
+.warna3 {
+    color: #ed8915; /* Contoh warna biru */
+}
+
+.garis {
+    border: none; /* Menghilangkan border default */
+    border-top: 2px solid #000; /* Menambahkan garis horizontal dengan warna dan ketebalan */
+    width: 90%; /* Mengatur lebar garis (misalnya 50% dari lebar kontainer) */
+    margin: 20px auto; /* Memberikan jarak atas dan bawah, serta menengahkan garis */
+}
+
+.garis1 {
+    border: none; /* Menghilangkan border default */
+    border-top: 2px solid #fff; /* Menambahkan garis horizontal dengan warna dan ketebalan */
+    width: 90%; /* Mengatur lebar garis (misalnya 50% dari lebar kontainer) */
+    margin: 20px auto; /* Memberikan jarak atas dan bawah, serta menengahkan garis */
+}
+
+.ipds7318 {
+    background: 
+        linear-gradient(rgba(154, 110, 110, 0.5), rgba(16, 13, 213, 0.5)),
+        url('/Semester 5/bpstator/img/statistik01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; 
+    height: 350px;
+    overflow: hidden;
+}
+
+.ipds7318 .content {
+    position: relative; 
+    z-index: 2;
+}
+
+.ipds7318 h1 { 
+    position: relative; 
+    z-index: 2; 
+    color: #000;
+    border: #FFF;
+    font-size: 8vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ipds h2 { 
+    position: relative; 
+    z-index: 2; 
+    color: #000;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button {
+    background: linear-gradient(to right, rgba(154, 110, 110, 0.5), rgba(16, 13, 213, 0.5));
+    padding: 20px 0;
+}
+
+#button div a {
+    background: linear-gradient(to right, rgba(154, 110, 110, 0.2), rgba(16, 13, 213, 0.2));
+}
+
+#buttonlink div a {
+    background: linear-gradient(to right, rgba(148, 136, 136, 0.2), rgba(35, 34, 57, 0.2));
+}
+
+.sticky-footer {
+    font-weight: bold;
+}
+
+/* Ukuran tombol default */
+.btn-custom {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+
+
+/* Ukuran tombol untuk layar besar (≥1200px) */
+@media (min-width: 1200px) {
+    .btn-custom {
+        padding: 15px 30px; /* Lebih besar */
+        font-size: 1.25rem; /* Teks lebih besar */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .ipds7318 h1 {
+        font-size: 10vw;
+    }
+    .ipds h2 { 
+        font-size: 5vw;
+    }
+    #content-wrapper {
+        margin-left: 0; /* Konten memenuhi lebar layar */
+    }
+}
